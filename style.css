@@ -1,0 +1,115 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Satisfy', cursive;
+    font-weight: 600px;
+    font-size: 2rem;
+    color: white;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: linear-gradient(to right, black, rgb(35, 16, 72));
+    /* gap: 50px; */
+}
+
+.heading{
+    width: 30%;
+}
+
+.heading p{
+    color: #969696;
+}
+
+.imgs-box{
+    width: 50%;
+    height: 60%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(4, auto);
+    gap: 10px;
+}
+
+.img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(0, 0, 0,0.5);
+    background-blend-mode: hard-light;
+    background-size: cover;
+    background-position: top;
+    transition: 0.2s ease-in;
+}
+
+.img:hover{
+    background-blend-mode: screen;
+    background-position: center;
+    box-shadow: 0px 0px 20px #969696;
+}
+
+.mount:hover{
+    background-position: 0% 20%;
+}
+
+.beach:hover{
+    background-position: 0% 40%;
+}
+
+.row-2{
+    grid-row: span 2;
+}
+
+.col-2{
+    grid-column: span 2;
+}
+
+
+/* media queries for the screen size less than 1024px */
+
+@media screen and (750px <= width <= 1024px){
+    body{
+        font-size: 1.5rem;
+    }
+}
+
+/* media queries for the screen size less than 750px */
+
+@media screen and (width<750px){
+    body{
+        font-size: 1rem;        
+    }
+
+    .heading{
+        margin-top: 30px;
+        text-align: center;
+        width: 70%;
+    }
+
+    .container{
+        height: fit-content;
+        flex-direction: column;
+    }
+
+    .imgs-box{
+        width: 70%;
+        margin-block: 20px;
+    }
+
+    .img{
+        height: 110px;
+        grid-column: span 3;
+        grid-row: span 1;
+    }
+}
+
